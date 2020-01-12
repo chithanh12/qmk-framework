@@ -35,13 +35,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5, B6 }
 
 #define MATRIX_ROW_PINS_RIGHT { F7, B1, B3, B2 }
-#define MATRIX_COL_PINS_RIGHT { B6, D4, C6, D7, E6, B4, B5 }
-
-#define SPLIT_HAND_PIN D5
-#define QMK_ESC_OUTPUT F1
-#define QMK_ESC_INPUT B1
-#define QMK_LED B0
-
+#define MATRIX_COL_PINS_RIGHT { B5, B4,E6, D7, C6, D4, B6 }
+  
+#define SPLIT_HAND_PIN D2
 
 #define ENCODERS_PAD_A { B2 }
 #define ENCODERS_PAD_B { B3 }
@@ -68,10 +64,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-#define BACKLIGHT_PIN B5
-#define BACKLIGHT_LEVELS 5
+// #define BACKLIGHT_PIN B5
+// #define BACKLIGHT_LEVELS 5
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D6
+#define RGB_DI_PIN D3
 #define RGBLED_NUM 12    // Number of LEDs
 #define RGBLED_SPLIT { 6, 6 }
