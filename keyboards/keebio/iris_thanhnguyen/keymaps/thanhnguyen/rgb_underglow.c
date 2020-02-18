@@ -3,8 +3,8 @@
 void handle_layer_changes(layer_state_t state) {
   switch (get_highest_layer(state)) {
     case _ADJUST:
-      rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+2);
-      rgblight_sethsv_noeeprom(HSV_WHITE);
+      rgblight_sethsv_noeeprom(HSV_RED);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_RAINBOW_MOOD + 1);
       break;
     case _RAISE:
       rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING+2);
