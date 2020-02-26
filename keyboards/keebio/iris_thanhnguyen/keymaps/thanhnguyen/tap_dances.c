@@ -54,7 +54,7 @@ void t_ctrl_finished (qk_tap_dance_state_t *state, void *user_data) {
 void t_ctrl_reset (qk_tap_dance_state_t *state, void *user_data) {
   switch (t_ctrl_tap_state.state) {
     case SINGLE_TAP: break;
-    case SINGLE_HOLD: unregister_code(KC_LALT); break;break;
+    case SINGLE_HOLD: unregister_code(KC_LALT); break;
     case DOUBLE_TAP: break;
     case DOUBLE_HOLD: layer_off(_ADJUST); break;
   }
