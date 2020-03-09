@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 7
 
 // wiring of each half
-#define MATRIX_ROW_PINS { B2, B3, B1, F7 }
+#define MATRIX_ROW_PINS { B2 , B3, B1,  F7 }
 #define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5, B6 }
 
 #define MATRIX_ROW_PINS_RIGHT { F7, B1, B3, B2 }
@@ -40,9 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_HAND_PIN D2
 
 #define ENCODERS_PAD_A { F5 }
-#define ENCODERS_PAD_B { F6 }
+#define ENCODERS_PAD_B { F6 }    
 
-#define ENCODERS_PAD_A_RIGHT { F7 }
+#define ENCODERS_PAD_A_RIGHT { F5 }
 #define ENCODERS_PAD_B_RIGHT { F6 }
 
 /* COL2ROW or ROW2COL */
