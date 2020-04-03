@@ -26,8 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_SPLIT
-#define RGBLED_NUM 12    // Number of LEDs
-#define RGBLED_SPLIT { 6, 6 }
+#define RGBLED_NUM 6    // Number of LEDs
+#define RGBLED_SPLIT { 3, 3 }
 
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
