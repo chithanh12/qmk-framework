@@ -39,8 +39,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   
 #define SPLIT_HAND_PIN D2
 
-#define ENCODERS_PAD_A { F5 }
-#define ENCODERS_PAD_B { F6 }    
+#define ENCODERS_PAD_A { F6 }
+#define ENCODERS_PAD_B { F5 }    
 
 #define ENCODERS_PAD_A_RIGHT { F5 }
 #define ENCODERS_PAD_B_RIGHT { F6 }
