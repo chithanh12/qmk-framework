@@ -4,13 +4,14 @@
 #define _QWERTY 0
 #define _LOWER 1
 #define _RAISE 2
-#define _ADJUST 3
+#define _CONFIG 3
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
   RAISE,
-  ADJUST,
+  FUNCT,
+  CONFIG,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -57,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
-  [_ADJUST] = LAYOUT(
+  [_CONFIG] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -83,28 +84,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case LOWER:
       if (record->event.pressed) {
         layer_on(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
+        update_tri_layer(_LOWER, _RAISE, _CONFIG);
       } else {
         layer_off(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
+        update_tri_layer(_LOWER, _RAISE, _CONFIG);
       }
       return false;
       break;
     case RAISE:
       if (record->event.pressed) {
         layer_on(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
+        update_tri_layer(_LOWER, _RAISE, _CONFIG);
       } else {
         layer_off(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
+        update_tri_layer(_LOWER, _RAISE, _CONFIG);
       }
       return false;
       break;
-    case ADJUST:
+    case CONFIG:
       if (record->event.pressed) {
-        layer_on(_ADJUST);
+        layer_on(_CONFIG);
       } else {
-        layer_off(_ADJUST);
+        layer_off(_CONFIG);
       }
       return false;
       break;

@@ -3,14 +3,14 @@
 #include QMK_KEYBOARD_H
 
 #define _QWERTY 0
-#define _ADJUST 1
+#define _CONFIG 1
 #define _LOWER  2
 #define _RAISE 3
 
 
 enum custom_keycodes {
   ON_QWERTY = SAFE_RANGE,
-  ON_ADJUST,
+  ON_CONFIG,
   ON_LOWER,
   ON_RAISE,
    
