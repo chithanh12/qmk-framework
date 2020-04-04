@@ -5,22 +5,23 @@
 #define _QWERTY 0
 #define _CONFIG 1
 #define _LOWER  2
-#define _RAISE 3
-
+#define _FUNCT 3
+#define _RAISE 4
 
 enum custom_keycodes {
   ON_QWERTY = SAFE_RANGE,
-  ON_CONFIG,
+ 
   ON_LOWER,
   ON_RAISE,
-   
+  ON_FUNCT,
+  ON_CONFIG,
+
   RGBETOG,
   RGBEMOD
 };
 
 #define MO_LOWR MO(_LOWER)
 #define MO_RAIS MO(_RAISE)
-
 
 #define TT_LOWR TT(_LOWER)
 #define TT_RAIS TT(_RAISE)
