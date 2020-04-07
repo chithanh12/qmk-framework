@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Danny Nguyen <danny@keeb.io>
+Copyright 2020 Thanh Nguyen <thanhnguyen12@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xCB10
 #define PRODUCT_ID      0x1256
 #define DEVICE_VER      0x0400
-#define MANUFACTURER    Keebio
-#define PRODUCT         Iris Keyboard
-#define DESCRIPTION     Split 50 percent ergonomic keyboard
+#define MANUFACTURER    Thanh Nguyen
+#define PRODUCT         Miniris Keyboard
+#define DESCRIPTION     Split 40 percent ergonomic keyboard
 
 /* key matrix size */
 // Rows are doubled-up
