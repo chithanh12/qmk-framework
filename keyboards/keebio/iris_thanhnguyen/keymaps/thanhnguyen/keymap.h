@@ -3,17 +3,19 @@
 #include QMK_KEYBOARD_H
 
 #define _QWERTY 0
-#define _ADJUST 1
+#define _CONFIG 1
 #define _LOWER  2
-#define _RAISE 3
-
+#define _FUNCT 3
+#define _RAISE 4
 
 enum custom_keycodes {
   ON_QWERTY = SAFE_RANGE,
-  ON_ADJUST,
+ 
   ON_LOWER,
   ON_RAISE,
-   
+  ON_FUNCT,
+  ON_CONFIG,
+
   RGBETOG,
   RGBEMOD
 };

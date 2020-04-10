@@ -1,3 +1,7 @@
+EXTRAFLAGS        += -flto
+
+MOUSEKEY_ENABLE = yes
+
 RGBLIGHT_ENABLE = yes
 SRC += rgb_underglow.c
 

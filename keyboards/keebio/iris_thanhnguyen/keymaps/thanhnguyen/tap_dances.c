@@ -37,16 +37,15 @@ void t_ctrl_finished (qk_tap_dance_state_t *state, void *user_data) {
   t_ctrl_tap_state.state = cur_dance(state);
   switch (t_ctrl_tap_state.state) {
     case SINGLE_TAP: break;
-    case SINGLE_HOLD:
-      register_code(KC_LALT); break;
-    case DOUBLE_TAP: break;
-    case DOUBLE_HOLD: layer_on(_ADJUST); break;
+    case SINGLE_HOLD: register_code(KC_LALT); break;
+    case DOUBLE_TAP: 
+       if (layer_state_is(_FUNCT)) layer_off(_FUNCT);
+       else layer_on(_FUNCT);
+      break;
+    case DOUBLE_HOLD: layer_on(_CONFIG); break;
     case TRIPLE_TAP:
-      if (layer_state_is(_ADJUST)) {
-        layer_off(_ADJUST);
-      } else {
-        layer_on(_ADJUST);
-      }
+      if (layer_state_is(_CONFIG)) layer_off(_CONFIG); 
+      else layer_on(_CONFIG);
       break;
   }
 }
@@ -56,7 +55,7 @@ void t_ctrl_reset (qk_tap_dance_state_t *state, void *user_data) {
     case SINGLE_TAP: break;
     case SINGLE_HOLD: unregister_code(KC_LALT); break;
     case DOUBLE_TAP: break;
-    case DOUBLE_HOLD: layer_off(_ADJUST); break;
+    case DOUBLE_HOLD: layer_off(_CONFIG); break;
   }
   t_ctrl_tap_state.state = 0;
 }
