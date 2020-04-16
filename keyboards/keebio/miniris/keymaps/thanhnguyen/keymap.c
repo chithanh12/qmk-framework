@@ -18,7 +18,7 @@ extern keymap_config_t keymap_config;
 
 #define TD_ESC TD(T_ESCTAB)
 #define TD_SHF TD(T_SHFCAP)
-#define LOW_SLS LT(_LOWER, KC_SLSH)
+// #define LOW_SLS LT(_LOWER, KC_SLSH)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   ┌─────┬─────┬─────┬─────┬─────┬─────┐                  ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐      ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
 //      ⇧     Z     X     C     V     B    LOW          RAIS   N     M     ,     .     /     ⇧ 
 //   └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘      └──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                         LGUI  LOWER  ENT                SPC  RAISE  RALT
+//                         LGUI  LOWER  SPC                 ENT RAISE  RALT
 //                        └─────┴─────┴─────┘            └─────┴─────┴─────┘ 
 
   [_QWERTY] = LAYOUT(
@@ -37,20 +37,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //├────────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       KC_LCTL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, KC_BSPC,
    //├────────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF,  KC_Z,    KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, LOW_SLS, KC_RSFT, 
+      TD_SHF,  KC_Z,    KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, KC_SLSH, KC_RSFT, 
    //└────────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                    KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS, TD_CTRL
     //                            └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
   ),
  
 //   ┌─────┬─────┬─────┬─────┬─────┬─────┐                  ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//   TAB     Q     W     E     R     T                        Y     U     I     O     P       
+//   TAB     Q     W     E     R      9                       Y     U     I     O     P       
 //   ├─────┼─────┼─────┼─────┼─────┼─────┤                  ├─────┼─────┼─────┼─────┼─────┼─────┤ 
-//    ⎋ ^     A     S     D     F     G                        H     J     K     L   SCLN   QUOT 
+//    ⎋ ^     1     2     3     4     0                        H     J     K     L   SCLN   QUOT 
 //   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐      ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
 //      ⇧     Z     X     C     V     B    LOW          RAIS   N     M     ,     .     /     ⇧ 
 //   └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘      └──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                         LGUI  LOWER  ENT                SPC  RAISE  RALT
+//                         LGUI  LOWER  SPC                 ENT RAISE  RALT
 //                        └─────┴─────┴─────┘            └─────┴─────┴─────┘ 
   [_LOWER] = LAYOUT(
    //┌───────┬───────┬───────┬───────┬───────┬───────┐                      ┌───────┬───────┬───────┬───────┬───────┬───────┐

@@ -71,5 +71,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
-#define RGBLED_NUM 6    // Number of LEDs
-#define RGBLED_SPLIT { 3, 3 }
+#define RGBLED_NUM 10    // Number of LEDs
+#define RGBLED_SPLIT { 5, 5 }
