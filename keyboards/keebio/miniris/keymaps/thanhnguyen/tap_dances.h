@@ -1,6 +1,11 @@
 #pragma once
 
 #include "keymap.h"
+
+#define TABHYPR MT(MOD_RCTL | MOD_RSFT | MOD_RALT | MOD_RGUI, KC_TAB)
+#define ESCLCTL MT(MOD_LCTL, KC_ESC)
+#define BSPCCTL MT(MOD_RCTL, KC_BSPC)
+
 typedef struct {
   bool is_press_action;
   int state;
@@ -24,5 +29,6 @@ void t_ctrl_reset (qk_tap_dance_state_t *state, void *user_data);
 enum {
   T_ESCTAB = 0,
   T_SHFCAP = 1,
-  T_CTRL = 2
+  T_CTRL = 2,
+  T_SEMCOL = 3
 };
