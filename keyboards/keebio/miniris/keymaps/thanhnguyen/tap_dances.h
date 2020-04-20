@@ -4,7 +4,7 @@
 
 #define TABHYPR MT(MOD_RCTL | MOD_RSFT | MOD_RALT | MOD_RGUI, KC_TAB)
 #define ESCLCTL MT(MOD_LCTL, KC_ESC)
-#define BSPCCTL MT(MOD_RCTL, KC_BSPC)
+#define CTRLSLSH MT(MOD_RCTL, KC_SLSH)
 
 typedef struct {
   bool is_press_action;
