@@ -34,4 +34,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
 #define ENCODER_DIRECTION_FLIP
-#define ENCODER_RESOLUTION 2
+// #define ENCODER_RESOLUTION 2
