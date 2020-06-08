@@ -14,7 +14,7 @@
 
 
 #define LAYOUT( \
-    L00, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, R05, \
+    L00, L01, L02, L03, L04, L05,           R05, R04, R03, R02, R01, R00, \
     LA1, LA2, LA3, LA4, LA5, LA6,           RA6, RA5, RA4, RA3, RA2, RA1, \
     LB1, LB2, LB3, LB4, LB5, LB6,           RB6, RB5, RB4, RB3, RB2, RB1, \
     LC1, LC2, LC3, LC4, LC5, LC6, LE6, RE6, RC6, RC5, RC4, RC3, RC2, RC1, \
