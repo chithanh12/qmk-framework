@@ -7,12 +7,10 @@
 #ifdef TAP_DANCE_ENABLE
 #  include "tap_dances.h"
 #endif
-#define MOUSEKEY_INTERVAL 20
-#define MOUSEKEY_DELAY 0
-#define MOUSEKEY_TIME_TO_MAX 60
-#define MOUSEKEY_MAX_SPEED 10
-#define MOUSEKEY_WHEEL_DELAY 0
-
+#define MOUSEKEY_WHEEL_INTERVAL 20
+#define MOUSEKEY_WHEEL_DELAY 20
+#define MOUSEKEY_MAX_SPEED 8
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
 extern keymap_config_t keymap_config;
 
 #define TD_SHF TD(T_SHFCAP)
@@ -205,10 +203,10 @@ void encoder_update_user(uint8_t index, bool clockwise) {
               tap_code(KC_VOLD);
           }
         } else if (index == 1) {
-          if (clockwise) {
-              tap_code(KC_PGDN);
+            if (clockwise) {
+              tap_code(KC_WH_D);
           } else {
-              tap_code(KC_PGUP);
+              tap_code(KC_WH_U);
           }
       }
    }
