@@ -14,6 +14,7 @@
 extern keymap_config_t keymap_config;
 
 #define TD_SHF TD(T_SHFCAP)
+#define Z_FNT LT(_FUNCT, KC_Z)
 
 // #define LOW_SLS LT(_LOWER, KC_SLSH)
 
@@ -34,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //├────────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON, KC_BSPC,
    //├────────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF,  KC_Z,    KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, CTRLSLSH, KC_RSFT, 
+      TD_SHF,  Z_FNT,   KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, CTRLSLSH, KC_RSFT, 
    //└────────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                    KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
     //                            └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
@@ -51,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                        └─────┴─────┴─────┘            └─────┴─────┴─────┘ 
   [_LOWER] = LAYOUT(
    //┌───────┬───────┬───────┬───────┬───────┬───────┐                      ┌───────┬───────┬───────┬───────┬───────┬───────┐
-      TABHYPR, KC_5,   KC_6,   KC_7,   KC_8,   KC_9,                          KC_Y,  KC_HOME,KC_INS, KC_END,   KC_P,   KC_BSLS, 
+      TABHYPR, KC_5,   KC_6,   KC_7,   KC_8,   KC_9,                         KC_Y,  KC_HOME, KC_END, KC_INS, KC_PSCR, KC_BSLS, 
    //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL,KC_1,   KC_2,   KC_3,   KC_4,   KC_0,                          KC_LEFT,KC_DOWN, KC_UP, KC_RGHT, KC_SCLN,KC_BSPC,
    //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
@@ -197,9 +198,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    }else{
       if (index == 0) {
           if (clockwise) {
-              tap_code(KC_VOLU);
-          } else {
               tap_code(KC_VOLD);
+          } else {
+              tap_code(KC_VOLU);
           }
         } else if (index == 1) {
             if (clockwise) {

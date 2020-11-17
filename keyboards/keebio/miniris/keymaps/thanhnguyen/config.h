@@ -21,14 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define USE_SERIAL
 #define USE_I2C
 //#define EE_HANDS
-#define TAPPING_TERM 130
+#define TAPPING_TERM 150
 #define PERMISSIVE_HOLD
 #define SPLIT_USB_DETECT
 
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_SPLIT
-#define RGBLED_NUM 10    // Number of LEDs
+#define RGBLED_NUM 10    // Number of LED
 #define RGBLED_SPLIT { 5, 5 }
 
 #define RGBLIGHT_HUE_STEP 8
