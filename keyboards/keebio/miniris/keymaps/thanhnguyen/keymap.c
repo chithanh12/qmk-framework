@@ -41,6 +41,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //                            └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
   ),
 
+  [_CONFIG] = LAYOUT(
+   //┌───────┬───────┬───────┬───────┬───────┬───────┐                      ┌───────┬───────┬───────┬───────┬───────┬───────┐
+      TABHYPR_, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                          KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSLS, 
+   //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
+      KC_LGUI, KC_A,  KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, KC_BSPC,
+   //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
+      TD_SHF, KC_Z,   KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, KC_SLSH, KC_RSFT, 
+   //└───────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
+                                  KC_LCTL,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
+    //                           └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
+  ),
 //   ┌─────┬─────┬─────┬─────┬─────┬─────┐                  ┌─────┬─────┬─────┬─────┬─────┬─────┐
 //   TAB     5     6     7     8      9                       Y     U     I     O     P       
 //   ├─────┼─────┼─────┼─────┼─────┼─────┤                  ├─────┼─────┼─────┼─────┼─────┼─────┤ 
@@ -102,28 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //└───────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                   KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
     //                           └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
-  ),
-
-//   ┌─────┬─────┬─────┬─────┬─────┬─────┐                  ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//   TAB     Q     W     E     R     T                        Y     U     I     O     P       
-//   ├─────┼─────┼─────┼─────┼─────┼─────┤                  ├─────┼─────┼─────┼─────┼─────┼─────┤ 
-//    ⎋ ^     A     S     D     F     G                        H     J     K     L   SCLN   QUOT 
-//   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐      ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//      ⇧     Z     X     C     V     B    LOW          RAIS   N     M     ,     .     /     ⇧ 
-//   └─────┴─────┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘      └──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┴─────┘
-//                         LGUI  LOWER  ENT                SPC  RAISE  RALT
-//                        └─────┴─────┴─────┘            └─────┴─────┴─────┘ 
-  [_CONFIG] = LAYOUT(
-   //┌───────┬───────┬───────┬───────┬───────┬───────┐                      ┌───────┬───────┬───────┬───────┬───────┬───────┐
-      TABHYPR, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                          KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSLS, 
-   //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
-      KC_LCTL, KC_A,  KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, KC_DEL,
-   //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF, KC_Z,   KC_X,    KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, KC_SLSH, RESET, 
-   //└───────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
-                                  KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
-    //                           └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
-  ),
+  )
 };
 
 
@@ -184,9 +174,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    if (layer_state_is(_CONFIG)){
         if (index == 0) {
             if (clockwise) {
-                tap_code(KC_MS_D);
+                tap_code(KC_BRID);
             } else {
-                tap_code(KC_MS_U);
+                tap_code(KC_BRIU);
             }
         } else if (index == 1) {
             if (clockwise) {
@@ -198,15 +188,15 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    }else{
       if (index == 0) {
           if (clockwise) {
-              tap_code(KC_VOLD);
+            tap_code(KC_VOLD);
           } else {
-              tap_code(KC_VOLU);
+            tap_code(KC_VOLU);
           }
         } else if (index == 1) {
-            if (clockwise) {
-              tap_code(KC_WH_D);
+          if (clockwise) {
+              tap_code(KC_BRID);
           } else {
-              tap_code(KC_WH_U);
+              tap_code(KC_BRIU);
           }
       }
    }
