@@ -38,13 +38,14 @@ void t_ctrl_finished (qk_tap_dance_state_t *state, void *user_data) {
     case SINGLE_TAP: break;
     case SINGLE_HOLD: register_code(KC_LALT); break;
     case DOUBLE_TAP: 
-       if (layer_state_is(_FUNCT)) layer_off(_FUNCT);
-       else layer_on(_FUNCT);
+      if (layer_state_is(_CONFIG)) layer_off(_CONFIG); 
+      else layer_on(_CONFIG);
+       
       break;
     case DOUBLE_HOLD: layer_on(_CONFIG); break;
     case TRIPLE_TAP:
-      if (layer_state_is(_CONFIG)) layer_off(_CONFIG); 
-      else layer_on(_CONFIG);
+      if (layer_state_is(_FUNCT)) layer_off(_FUNCT);
+      else layer_on(_FUNCT);
       break;
   }
 }
