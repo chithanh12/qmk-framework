@@ -3,6 +3,8 @@
 #include "keymap.h"
 
 #define TABHYPR MT(MOD_RCTL | MOD_RSFT | MOD_RALT | MOD_RGUI, KC_TAB)
+#define TABHYPR_ MT(MOD_RCTL | MOD_RSFT | MOD_RALT | MOD_LGUI , KC_TAB)
+
 #define ESCLCTL MT(MOD_LCTL, KC_ESC)
 #define CTRLSLSH MT(MOD_RCTL, KC_SLSH)
 
