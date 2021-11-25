@@ -14,7 +14,7 @@
 extern keymap_config_t keymap_config;
 
 #define TD_SHF TD(T_SHFCAP)
-#define Z_FNT LT(_FUNCT, KC_Z)
+#define B_FNT LT(_FUNCT, KC_B) 
 
 // #define LOW_SLS LT(_LOWER, KC_SLSH)
 
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //├────────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCOLON, KC_BSPC,
    //├────────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF, RGUI_T(KC_Z), KC_X, KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, CTRLSLSH, KC_RSFT, 
+      TD_SHF, RGUI_T(KC_Z), KC_X, KC_C,   KC_V,  B_FNT, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, CTRLSLSH, KC_RSFT, 
    //└────────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                    KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
     //                            └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL, KC_A,  KC_S,   KC_D,   KC_F,   KC_G,                          KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, KC_BSPC,
    //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF, RGUI_T(KC_Z), KC_X, KC_C,   KC_V,   KC_B, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, KC_SLSH, KC_RSFT, 
+      TD_SHF, RGUI_T(KC_Z), KC_X, KC_C,  KC_V, B_FNT, TG_LOWR,       TG_RAIS, KC_N,  KC_M,   KC_COMM,KC_DOT, KC_SLSH, KC_RSFT, 
    //└───────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                   KC_LCTL, TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
     //                           └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL,KC_1,   KC_2,   KC_3,   KC_4,   KC_0,                          KC_LEFT,KC_DOWN, KC_UP, KC_RGHT, KC_SCLN,KC_BSPC,
    //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
-      TD_SHF, KC_Z,   KC_X,   KC_C,   KC_COMM,KC_DOT,   TG_LOWR,       TG_RAIS, KC_N,  KC_M, KC_COMM, KC_DOT, KC_RCTL, KC_RSFT, 
+      TD_SHF, KC_Z,   KC_X,   KC_C,   KC_COMM,KC_DOT,   TG_LOWR,       TG_RAIS,  KC_N, KC_M, KC_COMM, KC_DOT, KC_RCTL, KC_RSFT, 
    //└───────┴───────┴───────┴───┬───┴───┬───┴───┬───┴───┬───┘      └───┬───┴───┬───┴───┬───┴───┬───┼───────┼───────┼───────┤
                                   KC_LGUI,TT_LOWR, KC_SPC,               KC_ENT, TT_RAIS ,TD_CTRL
     //                           └───────┴───────┴───────┘              └───────┴───────┴───────┘ 
@@ -188,9 +188,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    }else{
       if (index == 0) {
           if (clockwise) {
-            tap_code(KC_VOLD);
-          } else {
             tap_code(KC_VOLU);
+          } else {
+            tap_code(KC_VOLD);
           }
         } else if (index == 1) {
           if (clockwise) {
