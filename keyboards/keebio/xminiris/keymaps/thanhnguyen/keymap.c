@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                        └─────┴─────┴─────┘            └─────┴─────┴─────┘ 
   [_LOWER] = LAYOUT(
    //┌───────┬───────┬───────┬───────┬───────┬───────┐                      ┌───────┬───────┬───────┬───────┬───────┬───────┐
-      TABHYPR, KC_5,   KC_6,   KC_7,   KC_8,   KC_9,                         KC_Y,  KC_HOME, KC_END, KC_INS, KC_PSCR, KC_BSLS, 
+      KC_GRV, KC_5,   KC_6,   KC_7,   KC_8,   KC_9,                         KC_Y,  KC_HOME, KC_END, KC_INS, KC_PSCR, KC_BSLS, 
    //├───────┼───────┼───────┼───────┼───────┼───────┤                      ├───────┼───────┼───────┼───────┼───────┼───────┤
       ESCLCTL,KC_1,   KC_2,   KC_3,   KC_4,   KC_0,                          KC_LEFT,KC_DOWN, KC_UP, KC_RGHT, KC_SCLN,KC_BSPC,
    //├───────┼───────┼───────┼───────┼───────┼───────┼───────┐      ┌───────┼───────┼───────┼───────┼───────┼───────┼───────┤ 
@@ -188,9 +188,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    }else{
       if (index == 0) {
           if (clockwise) {
-            tap_code(KC_VOLU);
-          } else {
             tap_code(KC_VOLD);
+          } else {
+            tap_code(KC_VOLU);
           }
         } else if (index == 1) {
           if (clockwise) {
