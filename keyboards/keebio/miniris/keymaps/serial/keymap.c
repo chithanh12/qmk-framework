@@ -174,9 +174,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    if (layer_state_is(_CONFIG)){
         if (index == 0) {
             if (clockwise) {
-                tap_code(KC_BRID);
-            } else {
                 tap_code(KC_BRIU);
+            } else {
+                tap_code(KC_BRID);
             }
         } else if (index == 1) {
             if (clockwise) {
@@ -188,9 +188,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    }else{
       if (index == 0) {
           if (clockwise) {
-            tap_code(KC_VOLU);
-          } else {
             tap_code(KC_VOLD);
+          } else {
+            tap_code(KC_VOLU);
           }
         } else if (index == 1) {
           if (clockwise) {
